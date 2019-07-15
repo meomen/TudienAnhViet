@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_Translate">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="469.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background/background_Translate.jpg" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="inputText" layoutX="44.0" layoutY="87.0" onKeyTyped="#input" prefHeight="187.0" prefWidth="357.0" wrapText="true">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextArea>
+      <Label fx:id="ouputText" alignment="TOP_LEFT" layoutX="44.0" layoutY="287.0" prefHeight="187.0" prefWidth="357.0" style="-fx-background-color: white; -fx-background-radius: 5;" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.1" />
+         </effect>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </Label>
+      <Label layoutX="44.0" layoutY="49.0" prefHeight="32.0" prefWidth="48.0" text="From" textFill="WHITE">
+         <font>
+            <Font name="Segoe Print Bold" size="16.0" />
+         </font></Label>
+      <ChoiceBox fx:id="choiceFrom" layoutX="94.0" layoutY="52.0" prefHeight="25.0" prefWidth="98.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></ChoiceBox>
+      <Button fx:id="btn_hoandoi" layoutX="208.0" layoutY="51.0" mnemonicParsing="false" onAction="#HoanDoi" prefHeight="25.0" prefWidth="35.0" text="Button" />
+      <Label layoutX="254.0" layoutY="51.0" prefHeight="25.0" prefWidth="24.0" text="To" textFill="WHITE">
+         <font>
+            <Font name="Segoe Print Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceTo" layoutX="278.0" layoutY="51.0" prefHeight="25.0" prefWidth="98.0" />
+      <Button fx:id="btn_talkFrom" layoutX="401.0" layoutY="87.0" mnemonicParsing="false" onAction="#TalkFrom" prefHeight="40.0" prefWidth="40.0" text="nói" />
+      <Button fx:id="btn_talkTo" layoutX="401.0" layoutY="287.0" mnemonicParsing="false" onAction="#TalkTo" prefHeight="40.0" prefWidth="40.0" text="nói" />
+   </children>
+</AnchorPane>

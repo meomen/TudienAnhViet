@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../background/background_History.jpg" />
+         </image>
+      </ImageView>
+      <ListView fx:id="list_Item" layoutX="33.0" layoutY="73.0" prefHeight="355.0" prefWidth="179.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ListView>
+      <WebView fx:id="webHtml" layoutX="283.0" layoutY="73.0" prefHeight="355.0" prefWidth="261.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </WebView>
+      <Button fx:id="btn_delItem" alignment="CENTER" disable="true" layoutX="225.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="50.0" prefWidth="50.0" text="Xóa">
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" text="Xóa" textAlignment="CENTER" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btn_back" layoutX="424.0" layoutY="447.0" mnemonicParsing="false" onAction="#BackMain" prefHeight="32.0" prefWidth="120.0" text="Trở lại" />
+      <Button fx:id="btn_deltemAll" layoutX="206.0" layoutY="435.0" mnemonicParsing="false" onAction="#DeleteAll" prefHeight="40.0" prefWidth="98.0" text="Xóa Tất Cả" />
+      <Button fx:id="btn_tallk" alignment="CENTER" layoutX="507.0" layoutY="73.0" mnemonicParsing="false" onAction="#TalkWord" prefHeight="35.0" prefWidth="37.0" text="Nói" />
+   </children>
+</AnchorPane>

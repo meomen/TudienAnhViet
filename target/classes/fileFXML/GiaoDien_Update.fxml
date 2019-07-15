@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="220.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_Update">
+   <children>
+      <Label alignment="CENTER" layoutX="120.0" prefHeight="31.0" prefWidth="136.0" text="Sửa ">
+         <font>
+            <Font name="Segoe Print" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputWord" layoutX="59.0" layoutY="46.0" prefHeight="25.0" prefWidth="295.0" promptText="Nhập từ mới">
+         <font>
+            <Font name="Segoe Print" size="12.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="inputDescription" layoutX="59.0" layoutY="87.0" prefHeight="80.0" prefWidth="295.0" promptText="Nhập nghĩa mới">
+         <font>
+            <Font name="Segoe Print" size="12.0" />
+         </font>
+      </TextArea>
+      <Label alignment="CENTER" layoutX="6.0" layoutY="46.0" prefHeight="25.0" prefWidth="53.0" text="Từ">
+         <font>
+            <Font name="Segoe Print" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="6.0" layoutY="87.0" prefHeight="80.0" prefWidth="53.0" text="Nghĩa từ">
+         <font>
+            <Font name="Segoe Print" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_save" layoutX="188.0" layoutY="181.0" mnemonicParsing="false" onAction="#SaveUpdateWord" prefHeight="25.0" prefWidth="76.0" text="Lưu">
+         <font>
+            <Font name="Segoe UI Semibold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_exit" layoutX="278.0" layoutY="181.0" mnemonicParsing="false" onAction="#CannerUpdateWord" prefHeight="25.0" prefWidth="76.0" text="Hủy">
+         <font>
+            <Font name="Segoe UI Semibold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

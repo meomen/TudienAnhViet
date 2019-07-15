@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="648.0" focusTraversable="true" nodeOrientation="INHERIT" pickOnBounds="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../background/background_main.jpeg" />
+         </image>
+      </ImageView>
+      <WebView fx:id="web_ShowHTML" layoutX="315.0" layoutY="134.0" prefHeight="317.0" prefWidth="307.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </WebView>
+      <ListView fx:id="list_ListWord" layoutX="26.0" layoutY="134.0" prefHeight="317.0" prefWidth="175.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ListView>
+      <TextField fx:id="tf_input" layoutX="26.0" layoutY="109.0" onKeyReleased="#released" opacity="0.85" prefHeight="23.0" prefWidth="175.0" promptText="tìm kiếm">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn_talk" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="585.0" layoutY="134.0" mnemonicParsing="false" onAction="#TalkWord" prefHeight="35.0" prefWidth="37.0" style="-fx-graphic: url('icon/speakers.png');" wrapText="true">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Nói">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </Button>
+      <Button fx:id="btn_history" alignment="CENTER" layoutX="315.0" layoutY="72.0" mnemonicParsing="false" onAction="#enterHistory" prefHeight="47.0" prefWidth="50.0" text="Lịch Sử" wrapText="true">
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" text="Lịch Sử" wrapText="true">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font></Tooltip>
+         </tooltip>
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_favorite" alignment="CENTER" layoutX="393.0" layoutY="72.0" mnemonicParsing="false" onAction="#enterFavorite" prefHeight="47.0" prefWidth="50.0" text="Yêu Thích" wrapText="true">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" prefHeight="50.0" prefWidth="75.0" text="Danh sách Yêu thích" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button fx:id="btn_add" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="231.0" layoutY="181.0" mnemonicParsing="false" onAction="#addWord" prefHeight="40.0" prefWidth="52.0" style="-fx-graphic: url('icon/plus.png');">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" prefHeight="25.0" prefWidth="50.0" text="Thêm" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </Button>
+      <Button fx:id="btn_delete" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="232.0" layoutY="261.0" mnemonicParsing="false" onAction="#deleteWord" prefHeight="40.0" prefWidth="50.0" style="-fx-graphic: url('icon/minus.png');">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" prefHeight="25.0" prefWidth="50.0" text="Xóa" textAlignment="CENTER" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btn_update" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="231.0" layoutY="340.0" mnemonicParsing="false" onAction="#updateWord" prefHeight="40.0" prefWidth="52.0" style="-fx-graphic: url('icon/edit.png');">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" prefHeight="25.0" prefWidth="50.0" text="Sửa" textAlignment="CENTER" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btn_language" layoutX="57.0" layoutY="47.0" mnemonicParsing="false" onAction="#changeLanguage" prefHeight="35.0" prefWidth="80.0" text="Anh - Việt">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font></Button>
+      <Button fx:id="btn_Like" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="585.0" layoutY="181.0" mnemonicParsing="false" onAction="#LikeWord" prefHeight="35.0" prefWidth="37.0" style="-fx-graphic: url('icon/favorite.png');">
+         <tooltip>
+            <Tooltip text="Thích">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip></Button>
+      <Button fx:id="btn_Translate" alignment="CENTER" contentDisplay="CENTER" layoutX="469.0" layoutY="72.0" mnemonicParsing="false" onAction="#enterTranslate" prefHeight="47.0" prefWidth="71.0" text="Dịch Online" textAlignment="CENTER" wrapText="true">
+         <tooltip>
+            <Tooltip text="Dịch Online" wrapText="true">
+               <font>
+                  <Font name="Book Antiqua" size="12.0" />
+               </font></Tooltip>
+         </tooltip>
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font></Button>
+      <Hyperlink layoutX="505.0" layoutY="475.0" prefHeight="23.0" prefWidth="140.0" text="Make by Vu Duc Minh" />
+   </children>
+</AnchorPane>
